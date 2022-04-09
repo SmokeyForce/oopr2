@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfTilt.UpdateDrivers"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTilt"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        mc:Ignorable="d"
+        Title="UpdateDrivers" Height="661" Width="682" Loaded="Window_Loaded">
+    <Grid>
+        <Button Content="Install Drivers" HorizontalAlignment="Center" Margin="0,566,0,0" VerticalAlignment="Top" FontSize="20" Height="50" Width="202" Click="Button_Click" Cursor="Hand"/>
+        <Label Content="Your System unit and Devices:" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label2" Content="" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Height="453" Width="662"/>
+
+    </Grid>
+</Window>
