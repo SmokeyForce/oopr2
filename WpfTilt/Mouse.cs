@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace WpfTilt
 {
-	public sealed class Mouse : Devices
+	public sealed class Mouse : Devices, IDrawable
 	{
 		public int NumOfButtons { get; set; }
 		public string Backlight { get; set; }
 		public string Colour { get; set; }
+		public string PrintContent { get => Brand; }
+		public string this[int index] => "Mouse" + index;
 		public Mouse() : this("A4Tech", "COC100", 100, 3, "None", "Black")
 		{
 
@@ -44,5 +41,15 @@ namespace WpfTilt
 		{
 			return "I am " + FullName + " mouse";
 		}
+		public void Print(MessageSender sender)
+		{
+			sender(PrintContent);
+		}
+
+		public void Draw(string something, MessageSender sender)
+		{
+			sender("Drawed Device " + something);
+		}
+
 	}
 }

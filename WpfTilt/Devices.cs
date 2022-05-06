@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace WpfTilt
 {
+    public delegate void MessageSender(string message);
     public abstract class Devices
     {
         public string Brand { get; set; }
