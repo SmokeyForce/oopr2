@@ -42,10 +42,20 @@ namespace WpfTilt
             this.DialogResult = true;
             this.Close();
         }
-
+        public void SendMessage(string message)
+        {
+           MessageBox.Show(message);
+        }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            SystemUnit su1 = new SystemUnit("roflan","vitalya",100);
+            su1.Brand = "F1";
+            IDrawable printable = su1;
+            printable.Print(SendMessage);
+            printable = su1;
+            printable.Print(x => MessageBox.Show(x));
+            MessageBox.Show(printable[0]);
+            printable.Draw(printable.PrintContent, SendMessage);
         }
 
        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

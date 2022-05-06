@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace WpfTilt
 {
-	public class SystemUnit
+	public class SystemUnit : IDrawable
 	{
 		public string Brand { get; set; }
 		public string Model { get; set; }
 		public int Price { get; set; }
 		public string GetUnitName {get{ return this.Brand + " " + this.Model; } }
-	public string Colour { get; set; }
+		public string this[int index] => "System Unit" + index;
+		public string Colour { get; set; }
 	public string CPU { get; set; }
 	public string Size { get; set; }
 	public string Motherboard { get; set; }
 	public int Ram { get; set; }
-	public SystemUnit() :this("Papuas","Venecia",300)
+	public string PrintContent { get => Brand; }
+		public SystemUnit() :this("Papuas","Venecia",300)
 		{
 			
 		}
@@ -59,6 +56,14 @@ namespace WpfTilt
 			sw.WriteLine(CPU);
 			sw.WriteLine(Ram);
 		}
+		public void Print(MessageSender sender)
+		{
+			sender(PrintContent);
+		}
 
-}
+		public void Draw(string something, MessageSender sender)
+		{
+			sender("Drawed System Unit " + something);
+		}
+	}
 }
