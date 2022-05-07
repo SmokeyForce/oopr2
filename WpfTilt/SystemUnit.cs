@@ -63,7 +63,7 @@ namespace WpfTilt
 
 		public void Draw(string something, MessageSender sender)
 		{
-			sender("Drawed System Unit " + something);
+			sender("Showed System Unit " + something);
 		}
 	}
 }

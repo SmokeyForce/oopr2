@@ -48,7 +48,7 @@ namespace WpfTilt
 
 		public void Draw(string something, MessageSender sender)
 		{
-			sender("Drawed Device " + something);
+			sender("Showed Device " + something);
 		}
 
 	}
