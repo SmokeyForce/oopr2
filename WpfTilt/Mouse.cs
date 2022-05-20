@@ -4,6 +4,7 @@ namespace WpfTilt
 {
     public sealed class Mouse : Devices, IDrawable
     {
+        public int Id { get; set; }
         public int NumOfButtons { get; set; }
         public string Backlight { get; set; }
         public string Colour { get; set; }

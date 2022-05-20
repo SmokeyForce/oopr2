@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfTilt.LINQForm"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTilt"
+        mc:Ignorable="d"
+           TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="LINQ" Height="467" Width="884">
+    <Grid>
+        <ListView x:Name="MousesList" Margin="120,100,120,65">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="N кнопок" DisplayMemberBinding="{Binding NumOfButtons}" Width="125"/>
+                    <GridViewColumn Header="Підсвітка" DisplayMemberBinding="{Binding Backlight}" Width="120"/>
+                    <GridViewColumn Header="Колір" DisplayMemberBinding="{Binding Colour}" Width="100"/>
+                    <GridViewColumn Header="Бренд" DisplayMemberBinding="{Binding Brand}" Width="110"/>
+                    <GridViewColumn Header="Модель" DisplayMemberBinding="{Binding Model}" Width="120"/>
+                    <GridViewColumn Header="Ціна" DisplayMemberBinding="{Binding Price}" Width="100"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="WhereButton" Content="Where" HorizontalAlignment="Left" Margin="21,20,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="WhereButton_Click"/>
+        <Button x:Name="GroupButton" Content="Group" HorizontalAlignment="Left" Margin="153,20,0,0" VerticalAlignment="Top" Height="39" Width="102" Click="GroupButton_Click"/>
+        <Button x:Name="WhereExtenstionButton" Content="Where Extenstion" HorizontalAlignment="Left" Margin="284,20,0,0" VerticalAlignment="Top" Height="39" Width="158" Click="WhereExtenstionButton_Click"/>
+        <Button x:Name="MaxButton" Content="Max" HorizontalAlignment="Left" Margin="464,21,0,0" VerticalAlignment="Top" Height="39" Width="158" Click="MaxButton_Click"/>
+
+    </Grid>
+</Window>

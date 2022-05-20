@@ -4,6 +4,7 @@ namespace WpfTilt
 {
 	public class Monitor : Devices
 	{
+		public int Id { get; set; }
 		public int Hhz { get; set; }
 		public int Inch { get; set; }
 

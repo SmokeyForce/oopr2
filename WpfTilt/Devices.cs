@@ -4,6 +4,7 @@ namespace WpfTilt
     public delegate void MessageSender(string message);
     public abstract class Devices
     {
+        
         public string Brand { get; set; }
         public string Model { get; set; }
         public int Price { get; set; }

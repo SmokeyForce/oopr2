@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfTilt.AddMouse"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTilt"
+        mc:Ignorable="d"
+           TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="Add Mouse" Height="467" Width="884">
+    <Grid Margin="0,0,0,7">
+        <TextBox x:Name="NumOfButtons" HorizontalAlignment="Left" Margin="43,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="Backlight" HorizontalAlignment="Left" Margin="43,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Підсвітка" HorizontalAlignment="Left" Margin="43,105,0,0" VerticalAlignment="Top"/>
+        <Label Content="N кнопок" HorizontalAlignment="Left" Margin="43,59,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Colour" HorizontalAlignment="Left" Margin="42,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Колір" HorizontalAlignment="Left" Margin="43,152,0,0" VerticalAlignment="Top" Height="24"/>
+        <TextBox x:Name="Brand" HorizontalAlignment="Left" Margin="42,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Бренд" HorizontalAlignment="Left" Margin="42,202,0,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox x:Name="Model" HorizontalAlignment="Left" Margin="42,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Модель" HorizontalAlignment="Left" Margin="42,259,0,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox x:Name="Price" HorizontalAlignment="Left" Margin="43,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Ціна" HorizontalAlignment="Left" Margin="42,323,0,0" VerticalAlignment="Top" Height="22"/>
+        <ListView x:Name="MousesList" Margin="198,11,41,147" SelectionChanged="MousesList_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="N кнопок" DisplayMemberBinding="{Binding NumOfButtons}" Width="125"/>
+                    <GridViewColumn Header="Підсвітка" DisplayMemberBinding="{Binding Backlight}" Width="120"/>
+                    <GridViewColumn Header="Колір" DisplayMemberBinding="{Binding Colour}" Width="100"/>
+                    <GridViewColumn Header="Бренд" DisplayMemberBinding="{Binding Brand}" Width="110"/>
+                    <GridViewColumn Header="Модель" DisplayMemberBinding="{Binding Model}" Width="120"/>
+                    <GridViewColumn Header="Ціна" DisplayMemberBinding="{Binding Price}" Width="100"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="SendButton" Content="Add" HorizontalAlignment="Left" Margin="255,327,0,0" VerticalAlignment="Top" Height="57" Width="124" Click="SendButton_Click"/>
+        <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Left" Margin="469,312,0,0" VerticalAlignment="Top" Height="54" Width="144" Click="EditButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="684,333,0,0" VerticalAlignment="Top" Height="48" Width="149" Click="DeleteButton_Click"/>
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="464,386,0,0" VerticalAlignment="Top" Height="48" Width="149" Click="CloseButton_Click"/>
+
+
+    </Grid>
+</Window>

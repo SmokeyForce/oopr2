@@ -12,8 +12,10 @@
     <Grid>
         <Button Content="System Unit" HorizontalAlignment="Left" Margin="206,207,0,0" VerticalAlignment="Top" Height="82" Width="170" Cursor="Hand" Click="Button_Click"/>
         <Button Content="Devices" HorizontalAlignment="Left" Margin="442,207,0,0" VerticalAlignment="Top" Height="82" Width="170" Click="Button_Click_1"/>
-        <Button Content="Build" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top" Height="82" Width="170" Click="Button_Click_2"/>
+        <Button Content="Build" HorizontalAlignment="Left" Margin="206,314,0,0" VerticalAlignment="Top" Height="82" Width="170" Click="Button_Click_2"/>
         <Label Content="This program created for selecting,uprating and connecting pieces &#xD;&#xA;of your new,created PC&#xD;&#xA;This program created by Alexander Karpov&#xD;&#xA;second year student of Khmelnitskyi National University" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Height="155" Width="740" FontSize="20"/>
+        <Button Content="Mouses" HorizontalAlignment="Left" Margin="442,314,0,0" VerticalAlignment="Top" Height="82" Width="170" Click="Button_Click_3"/>
+        <Button Content="LINQ" HorizontalAlignment="Left" Margin="620,267,0,0" VerticalAlignment="Top" Height="82" Width="170" Click="Button_Click_4"/>
 
     </Grid>
 </Window>

@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfTilt
 {
@@ -78,6 +65,18 @@ namespace WpfTilt
 				UpdateDrivers form = new UpdateDrivers(selSU, selMon, selMouse);
 				form.ShowDialog();
 			}
+		}
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+			AddMouse addMouse = new AddMouse();
+			addMouse.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+			LINQForm lINQForm = new LINQForm();
+			lINQForm.Show();
 		}
     }
 }
